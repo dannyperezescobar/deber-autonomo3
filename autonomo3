@@ -1,0 +1,32 @@
+# al inicio el codigo pedira que ingrese nombre y se agregara el nombre del estudianre.
+
+nombre = input("Introduce el nombre del estudiante: ")
+suma = 0
+contador = 0
+
+# aqui incluiremos lo que es un bucle que nos indicara q debemos poner la nota y despues de la nota si agregamos lo que es un numero negativo con el signo - nos dara el total de las notas.
+while True:
+    nota = float(input("Introduce una nota (ingresa un valor negativo para finalizar): "))
+    
+    if nota < 0:
+        break
+    suma += nota
+    contador += 1
+
+# Con este codigo nosotros podremos ver el resultado de los nuemros q se puso anteriormente y se hara la suma de lo que son las notas
+if contador > 0:
+    promedio = suma / contador
+    print(f"El promedio de {nombre} es: {promedio}")
+
+#para finalizar aca en este lado calcularemos el promedio total del estudiante  y podremos ver si eesta sobresaliente o insuficiente
+
+    if promedio >= 90:
+        print("Rendimiento: Sobresaliente")
+    elif promedio >= 75:
+        print("Rendimiento: Bueno")
+    elif promedio >= 50:
+        print("Rendimiento: Regular")
+    else:
+        print("Rendimiento: Insuficiente")
+else:
+    print("No se ingresaron notas válidas.")
